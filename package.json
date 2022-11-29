@@ -13,7 +13,7 @@
     "build.types": "tsc --incremental --noEmit",
     "deploy": "wrangler pages dev ./dist",
     "clean": "rimraf dist/ public/build/ server/ tmp/",
-    "dev": "npm-run-all -l clean build -p dev.*",
+    "dev": "npm-run-all -l clean build -p \"dev.*\"",
     "dev.funcs": "PORT=3001 npm run pages.dev",
     "dev.pages": "vite --host --mode ssr --port 3000",
     "pages.dev": "wrangler pages dev ./dist --compatibility-date=2022-11-20 --port=$PORT --env dev",
